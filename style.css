@@ -7,23 +7,23 @@ body, html {
 }
 
 .header {
-    width: 100%;
-    padding-top: 100px;
-    padding-bottom: 50px;
     background-color: #FFF;
-
-    box-shadow: inset 0 -10px 20px -10px rgba(0,0,0,0.6);
 }
 
 .header .header-contents {
-    margin: 0 auto;
     width: 500px;
     text-align: center;
+    margin: 0 auto;
+
+    padding-bottom: 10px;
+    padding-top: 50px;
+
+    background-color: #FFF;
 }
 
 .header table {
     width: 300px;
-    margin:0 auto;
+    margin: 0 auto;
 }
 
 .header table tr {
@@ -59,9 +59,10 @@ body, html {
     color: orange;
 }
 
-.contents {
-    width: 600px;
+.contents p {
     margin: 0 auto;
+    width: 500px;
+    padding-top: 50px;
     font-style: italic;
     text-align: center;
 }
