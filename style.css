@@ -1,0 +1,58 @@
+body, html {
+    margin: 0;
+
+    font-family: 'Open Sans', sans-serif;
+
+    background-color: orange;
+}
+
+.header {
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 0px;
+    background-color: #FFF;
+
+    box-shadow: inset 0 -10px 20px -10px rgba(0,0,0,0.6);
+}
+
+.header .header-contents {
+    margin: 0 auto;
+    width: 500px;
+    text-align: center;
+}
+
+.header ul {
+    margin: 0 auto;
+    display: block;
+
+    width: 800px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.header ul {
+    list-style: none;
+    padding: 0px;
+}
+
+.header ul li {
+    padding: 0;
+    display: inline-block;
+}
+
+.header ul li a {
+    font-size: 40px;
+    color: ornage;
+    display: inline-block;
+    padding: 2px;
+    padding-right: 10px;
+    
+    color: rgba(255,255,255,0.7);
+}
+
+.contents {
+    width: 600px;
+    margin: 0 auto;
+    font-style: italic;
+    text-align: center;
+}
