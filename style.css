@@ -2,41 +2,81 @@ body, html {
     margin: 0;
 
     font-family: 'Open Sans', sans-serif;
+}
 
-    background-color: orange;
+a {
+    color: orange;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover, a:active, a:visited {
+    text-decoration: none;
 }
 
 .header {
     background-color: #FFF;
 }
 
-.header .header-contents {
-    width: 500px;
-    text-align: center;
+.header-contents,
+.main-contents,
+.footer-contents,
+.navigation-contents {
+    width: 800px;
     margin: 0 auto;
+    padding-bottom: 20px;
+}
 
-    padding-bottom: 10px;
-    padding-top: 50px;
+.navigation {
+    background-color: orange;
+    height: 40px;
+    clear: both;
+}
+
+.navigation-contents ul {
+    padding: 0;
+    margin: 0;
+}
+
+.navigation-contents ul li {
+    color: white;
+    list-style: none;
+}
+
+.navigation-contents ul li a {
+    color: white;
+    float: left;
+    padding: 10px;
+    padding-right: 40px;
+    cursor: pointer;
+}
+
+.header-contents {
+    padding-bottom: 20px;
+    padding-top: 20px;
+    height: 150px;
 
     background-color: #FFF;
 }
 
-.header table {
-    width: 300px;
-    margin: 0 auto;
+.header .header-contents img {
+    float: left;
+    width: 150px;
+    padding: 20px;
+    padding-left: 0;
 }
 
-.header table tr {
-    text-align: left;
-    color: gray;
-}
-
-.header table tr td:nth-child(1) {
-    font-weight: bold;
+.header .header-contents h2 {
+    width: 400px;
+    float: left;
+    color: #D3D3D3;
+    font-style: italic;
+    font-size: 20px;
+    padding-top: 30px;
 }
 
 .header ul {
-    margin-top: 10px;
+    margin-top: 30px;
 }
 
 .header ul {
@@ -51,18 +91,118 @@ body, html {
 
 .header ul li a {
     font-size: 40px;
-    color: ornage;
-    display: inline-block;
-    padding: 2px;
-    padding-right: 10px;
-    
     color: orange;
+    opacity: 0.6;
+    display: inline-block;
+    padding: 20px;
+    padding-right: 10px;
 }
 
-.contents p {
-    margin: 0 auto;
-    width: 500px;
-    padding-top: 50px;
-    font-style: italic;
-    text-align: center;
+.main {
+    background-color: white;
+    border-top: 4px solid orange;
+
+    color: #999;
+
+    line-height: 200%;
+}
+
+.main-contents {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.main-contents em {
+    font-weight: bold;
+    font-style: normal;
+    color: rgb(207, 134, 0);
+}
+
+.main h2 {
+    color: rgb(207, 134, 0);
+    border-bottom: 1px solid #EEE;
+    padding-bottom: 10px;
+}
+
+.main table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+}
+
+.main table thead {
+    background-color: rgba(255,165,0, 70%);
+    color: white;
+    text-align: left;
+}
+
+.main table td,
+.main table th {
+    padding: 15px;
+    padding-left: 10px;
+}
+
+.main table th {
+    padding: 5px;
+    padding-left: 10px;
+}
+
+.main table tbody td {
+    border-bottom: 2px solid #EEE;
+}
+
+.main table thead th {
+    border-bottom: 5px solid orange;
+}
+
+.main table tbody td em {
+    display: block;
+    font-size: 110%;
+}
+
+#training table tbody td:nth-child(2) {
+    width: 150px;
+}
+
+#training table tbody td:nth-child(3) {
+    width: 100px;
+}
+
+footer {
+    padding-top: 20px;
+    padding-bottom: 50px;
+
+    border-top: 4px solid orange;
+
+    min-height: 300px;
+
+    background-color: 	rgba(255,165,0, 70%);
+}
+
+footer, footer a {
+    color: rgb(207, 134, 0);
+}
+
+footer h2 {
+    text-align: left;
+    color: rgb(207, 134, 0);
+}
+
+footer table {
+    width: 400px;
+    float: left;
+}
+
+footer table tr {
+    text-align: left;
+}
+
+footer table tr td:nth-child(1) {
+    font-weight: bold;
+    color: rgb(207, 134, 0);
+}
+
+footer table td {
+    vertical-align: top;
+    padding-bottom: 20px;
 }
