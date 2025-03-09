@@ -1,7 +1,19 @@
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v15/pxiEyp8kv8JHgFVrJJfecg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  mso-font-alt: 'Arial';
+}
+
 body, html {
     margin: 0;
+    background-color: #FFF;
 
     font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', 'Poppins Fallback';
 }
 
 a {
@@ -14,10 +26,6 @@ a:hover, a:active, a:visited {
     text-decoration: none;
 }
 
-.header {
-    background-color: #FFF;
-}
-
 .header-contents,
 .main-contents,
 .footer-contents,
@@ -28,9 +36,13 @@ a:hover, a:active, a:visited {
 }
 
 .navigation {
-    background-color: orange;
-    height: 40px;
+    background-color: rgba(255, 165, 0, 0.9);
+    height: 70px;
     clear: both;
+
+    position: sticky;
+    top: 0;
+    overflow: hidden;
 }
 
 .navigation-contents ul {
@@ -44,11 +56,44 @@ a:hover, a:active, a:visited {
 }
 
 .navigation-contents ul li a {
-    color: white;
+    color: #FFF;
     float: left;
-    padding: 10px;
-    padding-right: 40px;
+    font-weight: bold;
+    padding: 5px;
+    margin: 20px;
+    margin-right: 40px;
     cursor: pointer;
+}
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+}
+
+.hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #FFF;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.hover-underline-animation.left::after {
+    transform-origin: bottom right;
+}
+
+.hover-underline-animation.left:hover::after {
+    transform-origin: bottom left;
 }
 
 .header-contents {
@@ -69,10 +114,11 @@ a:hover, a:active, a:visited {
 .header .header-contents h2 {
     width: 400px;
     float: left;
-    color: #D3D3D3;
+    color: #bbb;
     font-style: italic;
-    font-size: 20px;
-    padding-top: 30px;
+    font-size: 15px;
+    margin-top: 60px;
+    text-align: center;
 }
 
 .header ul {
@@ -100,8 +146,7 @@ a:hover, a:active, a:visited {
 
 .main {
     background-color: white;
-    border-top: 4px solid orange;
-
+    
     color: #999;
 
     line-height: 200%;
@@ -160,12 +205,65 @@ a:hover, a:active, a:visited {
     font-size: 110%;
 }
 
+#training h2,
+#consultancy h2 {
+    margin-top: 50px;
+    text-align: center;
+}
+
 #training table tbody td:nth-child(2) {
     width: 150px;
 }
 
 #training table tbody td:nth-child(3) {
     width: 100px;
+}
+
+#training > p,
+#consultancy > p {
+    text-align: center;
+    font-style: italic;
+}
+
+.horiz-list {
+    margin: 0;
+    padding: 0;
+}
+
+.horiz-list h3 {
+    color: orange;
+}
+
+.horiz-list li {
+    text-align: center;
+    float: left;
+    display: block;
+    width: 250px;
+    list-style: none;
+    padding-right: 15px;
+    margin: 0;
+}
+
+.horiz-list li em {
+    background-color: orange;
+    display: inline-block;
+    padding: 0px 8px 0px 8px;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    border-radius: 1px;
+
+    border-radius: 10px;
+    border: 2px solid orange;
+}
+
+.horiz-list {
+    clear: both;
+}
+
+#about, #training {
+    clear: both;
+    padding-top: 100px;
 }
 
 footer {
