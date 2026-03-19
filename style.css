@@ -309,8 +309,21 @@ a:active, a:visited {
     color: #1e293b;
     text-align: center;
     margin: 0 0 10px;
-    padding-bottom: 14px;
-    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 18px;
+    border-bottom: none;
+    position: relative;
+}
+
+.section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 48px;
+    height: 3px;
+    background: linear-gradient(90deg, #f97316, #ea580c);
+    border-radius: 2px;
 }
 
 .section__lead {
